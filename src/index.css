@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+input{
+  height: 40px;
+  width: 450px;
+  font-size: 20px;
+  border-radius: 50px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
