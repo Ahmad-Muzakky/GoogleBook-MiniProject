@@ -55,28 +55,28 @@ function Main() {
       <div className="border-2 rounded-t-lg">
         <div className="flex flex-col justify-between h-full">
           <img
-            className="object-fill w-full rounded-t-md"
+            className="object-fill rounded-t-md"
             src={items.volumeInfo.imageLinks.thumbnail}
           />
           <div className="flex flex-col justify-between px-3">
-            <h3 className="text-xl font-semibold my-4  text-darkBlue">
+            <h3 className="text-base font-semibold my-4  text-darkBlue truncate">
               {items.volumeInfo.title}
             </h3>
             <div>By</div>
-            <div className="text-xl mb-4 text-blue-700">
+            <div className="text-base mb-4 text-blue-700 truncate">
               {items.volumeInfo.authors}
             </div>
             <div className="flex justify-between">
-              <ReactStars size={35} />
+              <ReactStars size={25} />
               <button
-                onClick={()=>{
-                    addToWishlist(
-                      items.volumeInfo.title,
-                      items.volumeInfo.authors,
-                      items.volumeInfo.infoLink
-                    );
+                onClick={() => {
+                  addToWishlist(
+                    items.volumeInfo.title,
+                    items.volumeInfo.authors,
+                    items.volumeInfo.infoLink
+                  );
                 }}
-                className="border border-4 m-4 p-2 rounded-lg font-semibold border-blue-300 bg-blue-500 text-white"
+                className="border border-4 m-1 p-1 rounded-lg font-semibold border-blue-300 bg-blue-500 text-white"
               >
                 Add to Wishlist
               </button>
@@ -117,7 +117,7 @@ function Main() {
             {loading ? (
               <div className=""></div>
             ) : (
-              <div className="grid grid-cols-3 gap-5 justify between">
+              <div className="grid grid-cols-5 gap-5 justify between">
                 {dataProduk}
               </div>
             )}
